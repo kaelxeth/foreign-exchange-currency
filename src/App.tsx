@@ -79,7 +79,7 @@ export default class Entry extends Component<{}, State> {
     return this.setState({ value: refinedValue });
   };
 
-  handleChangeBase = (base: string) => this.setState({ base: base });
+  handleChangeBase = (base: string) => this.setState({ base });
 
   handleChangeAddMoreCurrency = (addMoreCurrencyValue: string) =>
     this.setState({
