@@ -1,5 +1,8 @@
 {
   "name": "foreign-exchange",
+  "repository": {
+    "url": "https://github.com/jacoahmad/foreign-exchange-currency"
+  },
   "version": "0.1.0",
   "private": true,
   "dependencies": {
