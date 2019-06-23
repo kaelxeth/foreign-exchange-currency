@@ -1,3 +1,10 @@
+## Packages Used
+- [Atlaskit](https://atlaskit.atlassian.com/)
+Since we required to install components that we are going to use independently, this will solves bloated dependency for such small app.
+
+- [create-react-app Bootstrap](https://github.com/facebook/create-react-app)
+For fast & easy setup with [Typescript](https://typescriptlang.org)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
