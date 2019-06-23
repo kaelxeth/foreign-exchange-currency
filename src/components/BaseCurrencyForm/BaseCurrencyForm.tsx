@@ -48,7 +48,7 @@ const BaseCurrencyForm: FunctionComponent<Props> = (
           options={currencyOptions}
           onChange={handleCurrencyChange}
           // Atlaskit accept the full object with label instead of only value
-          value={currencyOptions.filter(
+          value={currencyOptions.find(
             currency => currency.value === currencyValue
           )}
         />
