@@ -142,7 +142,7 @@ export default class Entry extends Component<{}, State> {
     const rates: { [key: string]: string } = {};
     Object.keys(calculatedRates).forEach((rate: string) => {
       if (currenciesToDisplay.includes(rate)) {
-        rates[rate] = rate;
+        rates[rate] = calculatedRates[rate];
       }
     });
 
