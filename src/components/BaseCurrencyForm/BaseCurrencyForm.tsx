@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, FunctionComponent, Fragment } from "react";
 import TextField from "@atlaskit/textfield";
 import Select from "@atlaskit/select";
 import styled from "styled-components";
@@ -12,7 +12,7 @@ interface Props {
   value: string;
 }
 
-const BaseCurrencyForm: React.FunctionComponent<Props> = (
+const BaseCurrencyForm: FunctionComponent<Props> = (
   props
 ): JSX.Element => {
   const {
@@ -36,7 +36,7 @@ const BaseCurrencyForm: React.FunctionComponent<Props> = (
   };
 
   return (
-    <React.Fragment>
+    <Fragment>
       <CurrencyTitle>{currencyValue} - {toISOCurrencyName(currencyValue)}</CurrencyTitle>
       <Container>
         <TextField
@@ -53,7 +53,7 @@ const BaseCurrencyForm: React.FunctionComponent<Props> = (
           )}
         />
       </Container>
-    </React.Fragment>
+    </Fragment>
   );
 };
 

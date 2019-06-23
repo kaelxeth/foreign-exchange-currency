@@ -1,4 +1,4 @@
-import React, { Component, ChangeEvent } from "react";
+import React, { Component } from "react";
 import styled from "styled-components";
 import Button from "@atlaskit/button";
 import Spinner from "@atlaskit/spinner";
@@ -81,10 +81,9 @@ export default class Entry extends Component<{}, State> {
 
   handleChangeBase = (base: string) => this.setState({ base: base });
 
-  handleChangeAddMoreCurrency = (e: ChangeEvent<HTMLInputElement>) =>
-    e.target.value.length <= 3 &&
+  handleChangeAddMoreCurrency = (addMoreCurrencyValue: string) =>
     this.setState({
-      addMoreCurrencyValue: e.target.value.toUpperCase().replace(/[^A-Z]/g, "")
+      addMoreCurrencyValue
     });
 
   handleToggleShowAddMore = () =>
@@ -147,7 +146,8 @@ export default class Entry extends Component<{}, State> {
     });
     return (
       <AppWrapper>
-        <h1>Foreign Exchange Currency</h1>
+        <BasicAppBar>Foreign Exchange Currency</BasicAppBar>
+        <AppBarReservedSpace />
         <BaseCurrencyForm
           value={value}
           onChangeValue={this.handleChangeValue}
@@ -203,4 +203,23 @@ const AppWrapper = styled.div`
 
 const Padder = styled.div`
   padding: 16px;
+`;
+
+const AppBarReservedSpace = styled.div`
+  height: 52px;
+`;
+
+const BasicAppBar = styled.div`
+  position: fixed;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  padding: 16px;
+  color: #ffffff;
+  background-color: #0052cc;
+  font-weight: bold;
+  text-transform: uppercase;
+  z-index: 3;
+  text-align: center;
+  box-shadow: 0 3px 6px 1px rgba(0, 0, 0, 0.15);
 `;
