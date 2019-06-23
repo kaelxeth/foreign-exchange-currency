@@ -52,7 +52,7 @@ export default function CurrencyCard(props: CurrencyCardProps) {
 }
 
 const Container = styled(Row)`
-  padding: 8px;
+  padding: 12px;
   width: 100%;
   justify-content: space-between;
   border: 2px solid #e2e2e2;
@@ -63,7 +63,7 @@ const Container = styled(Row)`
   box-sizing: border-box;
   &:hover {
     box-shadow: 0 2px 4px rgba(25, 25, 25, 0.15);
-    border-color: #172b4d;
+    border-color: #0052cc;
   }
 `;
 
@@ -93,6 +93,7 @@ const CurrencyName = styled.div`
   color: #343434;
   font-size: 10px;
   margin-bottom: 4px;
+  text-transform: capitalize;
 `;
 
 const Bold = styled.div`

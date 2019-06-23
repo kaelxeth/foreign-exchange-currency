@@ -145,7 +145,6 @@ export default class Entry extends Component<{}, State> {
         rates[rate] = calculatedRates[rate];
       }
     });
-
     return (
       <AppWrapper>
         <h1>Foreign Exchange Currency</h1>
